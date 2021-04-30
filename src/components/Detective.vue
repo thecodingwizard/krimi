@@ -3,7 +3,7 @@
     <v-col class="mt-10" cols="12" md="6">
       <v-card>
         <v-card-text>
-          <h2 class="display-2 mb-4">{{ player.name }}</h2>
+          <h2 class="text-h3 app-subtitle mb-4">{{ player.name }}</h2>
           <v-divider class="my-2" />
           <v-chip-group column>
             <v-chip
@@ -32,6 +32,9 @@
         </v-card-text>
         <v-card-actions>
           <v-btn @click="sheet = !sheet" text>{{ t("Role") }}</v-btn>
+          <v-btn @click="board = !board" :disabled="disableActions" text>{{
+            t("Board")
+          }}</v-btn>
           <v-btn @click="passTurn" :disabled="disableActions" text>{{
             t("Pass turn")
           }}</v-btn>
@@ -58,6 +61,18 @@
             :game="game"
             :player="player"
           />
+        </v-container>
+      </v-sheet>
+    </v-bottom-sheet>
+    <v-bottom-sheet v-model="board" fullscreen>
+      <v-sheet class="text-center" style="overflow-y:auto;height:100%;">
+        <v-container>
+          <v-btn class="my-3" dark @click="board = !board">{{
+            t("close")
+          }}</v-btn>
+          <div class="mx-n3">
+            <board></board>
+          </div>
         </v-container>
       </v-sheet>
     </v-bottom-sheet>
@@ -149,11 +164,13 @@
 
 <script>
 import MurdererChoice from "@/components/MurdererChoice";
+import Board from "@/components/Board";
 export default {
-  components: { MurdererChoice },
+  components: { MurdererChoice, Board },
   data: () => ({
     sheet: true,
     solve: false,
+    board: false,
     guess: {
       player: null,
       mean: null,

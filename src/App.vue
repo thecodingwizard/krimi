@@ -42,12 +42,16 @@ export default {
       font-weight: bolder;
     }
   }
-  .display-2.display-2 {
+  .app-subtitle.app-subtitle {
     color: $darkblue;
     letter-spacing: -2px !important;
     word-spacing: -10px;
   }
   .display-1.display-1 {
+    letter-spacing: -2px !important;
+    word-spacing: -10px;
+  }
+  .app-title.app-title {
     letter-spacing: -2px !important;
     word-spacing: -10px;
   }

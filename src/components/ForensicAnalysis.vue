@@ -6,8 +6,11 @@
       style="margin-top:auto;"
       :style="[!game.murdererChoice && 'margin-bottom:auto']"
     >
-      <h2 class="display-2 mb-4">{{ player.name }}</h2>
-      <div class="display-1" v-if="game.murdererChoice">
+      <h2 class="text-h3 app-subtitle mb-2">{{ player.name }}</h2>
+      <v-btn @click="board = !board" depressed color="primary" class="mb-2">{{
+        t("View Board")
+      }}</v-btn>
+      <div class="text-h5 text-sm-h4 app-title" v-if="game.murdererChoice">
         {{ murderer.name }} {{ t("used") }}
         <span class="blue--text"
           >&nbsp;&nbsp;{{ game.murdererChoice.mean }}</span
@@ -79,13 +82,30 @@
         </v-col>
       </v-row>
     </v-col>
+
+    <v-bottom-sheet v-model="board" fullscreen>
+      <v-sheet class="text-center" style="overflow-y:auto;height:100%;">
+        <v-container>
+          <v-btn class="my-3" dark @click="board = !board">{{
+              t("close")
+            }}</v-btn>
+          <div class="mx-n3">
+            <board></board>
+          </div>
+        </v-container>
+      </v-sheet>
+    </v-bottom-sheet>
   </v-row>
 </template>
 
 <script>
+import Board from "@/components/Board";
+
 export default {
+  components: { Board },
   data: () => ({
-    analysis: []
+    analysis: [],
+    board: false
   }),
   locales: {
     pt_br: {

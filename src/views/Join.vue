@@ -5,7 +5,7 @@
         {{ errorText }}
       </v-alert>
       <v-col class="mt-6" cols="12" md="6">
-        <h2 class="display-2">{{ t("Join game") }}</h2>
+        <h2 class="text-h3 app-subtitle">{{ t("Join game") }}</h2>
         <p class="subtitle-1 my-4">
           {{ t("Enter a game code and a nickname to join a game:") }}
         </p>

@@ -3,7 +3,7 @@
     <v-row style="height:100%" align="center">
       <v-col class="offset-xl-4" cols="12" lg="6" xl="4">
         <img src="~@/assets/logo.svg" max-width="136" class="mb-4" contain />
-        <h2 class="display-2">
+        <h2 class="text-h3 app-subtitle">
           {{ t("A game of") }}
           <vue-typer
             :text="[t('deception'), t('deduction')]"

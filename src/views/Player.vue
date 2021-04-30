@@ -9,7 +9,7 @@
     >
       <v-col cols="12" lg="6">
         <div v-if="!game.started">
-          <h2 class="display-2">{{ player.name }}</h2>
+          <h2 class="text-h3 app-subtitle">{{ player.name }}</h2>
           <p class="subtitle-1 my-4">
             {{ t("You are in room") }}
             <code class="accent--text text-uppercase">{{ game.gameId }}</code

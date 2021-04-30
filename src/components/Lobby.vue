@@ -2,7 +2,7 @@
   <v-container style="height:100%">
     <v-row style="height:100%" align="center" v-if="game">
       <v-col class="mt-10 offset-xl-3 offset-lg-2" cols="12" md="5" xl="4">
-        <h2 class="display-2">
+        <h2 class="text-h3 app-subtitle">
           {{ t("Lobby for room") }}
           <code class="accent--text text-uppercase">{{
             $route.params.id
