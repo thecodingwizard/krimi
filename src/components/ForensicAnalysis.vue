@@ -73,9 +73,8 @@
             @click="sendAnalysis"
             x-large
             :disabled="
-              analysis.length < availableClues.length ||
-                (game.forensicAnalysis &&
-                  game.forensicAnalysis.length === availableClues.length)
+              game.forensicAnalysis &&
+                game.forensicAnalysis.length === availableClues.length
             "
             >Send analysis</v-btn
           >
@@ -87,8 +86,8 @@
       <v-sheet class="text-center" style="overflow-y:auto;height:100%;">
         <v-container>
           <v-btn class="my-3" dark @click="board = !board">{{
-              t("close")
-            }}</v-btn>
+            t("close")
+          }}</v-btn>
           <div class="mx-n3">
             <board></board>
           </div>

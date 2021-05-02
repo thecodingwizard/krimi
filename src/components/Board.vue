@@ -4,14 +4,14 @@
       <v-col cols="12" sm="6" md="9">
         <v-row>
           <v-col cols="12">
-            <div class="text-h4 text-sm-h3 app-subtitle">
+            <div class="text-h5 text-sm-h3 app-subtitle">
               {{ t("Game") }}
               <code class="accent--text text-uppercase mr-2 mr-sm-0">{{ game.gameId }}</code>
               <small class="ml-lg-4"
                 >{{ t("Round") }} {{ game.round }} {{ t("of") }} 3</small
               >
             </div>
-            <p class="text-h5 text-sm-h2 app-title my-4">
+            <p class="text-h4 text-sm-h2 app-title my-4">
               {{ t("Suspects of the crime:") }}
             </p>
           </v-col>

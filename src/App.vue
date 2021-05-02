@@ -117,4 +117,17 @@ export default {
     }
   }
 }
+
+@media (max-width: 599px) {
+  .v-application {
+    .app-subtitle.app-subtitle {
+      letter-spacing: -1px !important;
+      word-spacing: -6px;
+    }
+    .app-title.app-title {
+      letter-spacing: -1px !important;
+      word-spacing: -6px;
+    }
+  }
+}
 </style>
